@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Plans - FitLife</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body class="light-mode">
+  <header>
+    <nav class="navbar">
+      <div class="logo">FitLife</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="bmi.html">BMI Calculator</a></li>
+        <li><a href="workouts.html" class="active">Workout Plans</a></li>
+        <li><a href="nutrition.html">Nutrition Tips</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Workout Plans</h1>
+      <p>Follow our 3-day Push/Pull/Legs split for optimal results.</p>
+    </section>
+    <br><br>
+    <section class="workout-controls">
+      <div class="workout-tabs">
+        <button class="tab-btn active" data-tab="push">Upper Body (Push)</button>
+        <button class="tab-btn" data-tab="legs">Lower Body</button>
+        <button class="tab-btn" data-tab="pull">Upper Body (Pull)</button>
+      </div>
+      
+      <div class="difficulty-filter">
+        <span>Difficulty:</span>
+        <div class="toggle-buttons">
+          <button class="toggle-btn active" data-difficulty="beginner">Beginner</button>
+          <button class="toggle-btn" data-difficulty="intermediate">Intermediate</button>
+          <button class="toggle-btn" data-difficulty="advanced">Advanced</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="workout-plans">
+      <div class="tab-content active" id="push-content">
+        <h2>Push Day Workout</h2>
+        <p>Focus on chest, shoulders, and triceps.</p>
+        
+        <div class="workout-exercises">
+          <!-- Beginner exercises -->
+          <div class="exercise-card" data-difficulty="beginner">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Bench Press</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Bench Press" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 3</p>
+                <p><strong>Reps:</strong> 8-10</p>
+                <p><strong>Rest:</strong> 90 seconds</p>
+                <p><strong>Instructions:</strong> Lie on a flat bench, grip the bar slightly wider than shoulder-width, lower the bar to your chest, and press back up.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="exercise-card" data-difficulty="beginner">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Push-Ups</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Push-Ups" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 3</p>
+                <p><strong>Reps:</strong> 10-12</p>
+                <p><strong>Rest:</strong> 60 seconds</p>
+                <p><strong>Instructions:</strong> Start in a plank position with hands slightly wider than shoulders, lower your body until your chest nearly touches the floor, then push back up.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Intermediate exercises -->
+          <div class="exercise-card" data-difficulty="intermediate">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Incline Dumbbell Press</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Incline Dumbbell Press" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 4</p>
+                <p><strong>Reps:</strong> 8-10</p>
+                <p><strong>Rest:</strong> 90 seconds</p>
+                <p><strong>Instructions:</strong> Sit on an incline bench set to 30-45 degrees, hold dumbbells at shoulder level, press up until arms are extended, then lower back down.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Advanced exercises -->
+          <div class="exercise-card" data-difficulty="advanced">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Weighted Dips</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Weighted Dips" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 4</p>
+                <p><strong>Reps:</strong> 6-8</p>
+                <p><strong>Rest:</strong> 120 seconds</p>
+                <p><strong>Instructions:</strong> Attach weight to a dip belt, grip parallel bars, lower your body until upper arms are parallel to the ground, then press back up.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="legs-content">
+        <h2>Legs Day Workout</h2>
+        <p>Focus on quadriceps, hamstrings, glutes, and calves.</p>
+        
+        <div class="workout-exercises">
+          <!-- Beginner exercises -->
+          <div class="exercise-card" data-difficulty="beginner">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Bodyweight Squats</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Bodyweight Squats" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 3</p>
+                <p><strong>Reps:</strong> 12-15</p>
+                <p><strong>Rest:</strong> 60 seconds</p>
+                <p><strong>Instructions:</strong> Stand with feet shoulder-width apart, lower your body by bending knees and pushing hips back, then return to standing position.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Intermediate exercises -->
+          <div class="exercise-card" data-difficulty="intermediate">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Barbell Back Squats</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Barbell Back Squats" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 4</p>
+                <p><strong>Reps:</strong> 8-10</p>
+                <p><strong>Rest:</strong> 120 seconds</p>
+                <p><strong>Instructions:</strong> Place a barbell across your upper back, feet shoulder-width apart, squat down until thighs are parallel to the floor, then push back up.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Advanced exercises -->
+          <div class="exercise-card" data-difficulty="advanced">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Bulgarian Split Squats</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Bulgarian Split Squats" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 3</p>
+                <p><strong>Reps:</strong> 8-10 per leg</p>
+                <p><strong>Rest:</strong> 90 seconds</p>
+                <p><strong>Instructions:</strong> Place one foot on a bench behind you, hold dumbbells at your sides, lower your body until front thigh is parallel to the ground, then push back up.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="pull-content">
+        <h2>Pull Day Workout</h2>
+        <p>Focus on back, biceps, and rear deltoids.</p>
+        
+        <div class="workout-exercises">
+          <!-- Beginner exercises -->
+          <div class="exercise-card" data-difficulty="beginner">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Lat Pulldowns</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Lat Pulldowns" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 3</p>
+                <p><strong>Reps:</strong> 10-12</p>
+                <p><strong>Rest:</strong> 90 seconds</p>
+                <p><strong>Instructions:</strong> Sit at a lat pulldown machine, grip the bar wider than shoulder-width, pull the bar down to your upper chest, then slowly release back up.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Intermediate exercises -->
+          <div class="exercise-card" data-difficulty="intermediate">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Barbell Rows</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Barbell Rows" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 4</p>
+                <p><strong>Reps:</strong> 8-10</p>
+                <p><strong>Rest:</strong> 90 seconds</p>
+                <p><strong>Instructions:</strong> Bend at the hips with a slight knee bend, hold a barbell with arms extended, pull the bar to your lower chest, then lower back down.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Advanced exercises -->
+          <div class="exercise-card" data-difficulty="advanced">
+            <div class="exercise-header" onclick="toggleExercise(this)">
+              <h3>Weighted Pull-Ups</h3>
+              <span class="exercise-toggle">+</span>
+            </div>
+            <div class="exercise-details">
+              <img src="/placeholder.svg?height=200&width=300" alt="Weighted Pull-Ups" loading="lazy">
+              <div class="exercise-info">
+                <p><strong>Sets:</strong> 4</p>
+                <p><strong>Reps:</strong> 6-8</p>
+                <p><strong>Rest:</strong> 120 seconds</p>
+                <p><strong>Instructions:</strong> Attach weight to a dip belt, grip a pull-up bar with hands wider than shoulder-width, pull your body up until chin is over the bar, then lower back down.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workout-tips">
+      <h2>Workout Tips</h2>
+      <div class="tips-container">
+        <div class="tip-card">
+          <h3>Warm Up Properly</h3>
+          <p>Always start with 5-10 minutes of light cardio and dynamic stretching to prepare your muscles and joints.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Progressive Overload</h3>
+          <p>Gradually increase weight, reps, or sets over time to continue making progress.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Rest and Recovery</h3>
+          <p>Allow 48 hours of rest for muscle groups between workouts. Aim for 7-9 hours of sleep per night.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">FitLife</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="bmi.html">BMI Calculator</a>
+        <a href="workouts.html">Workout Plans</a>
+        <a href="nutrition.html">Nutrition Tips</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 FitLife. All rights reserved.  This project is made by Nilax (12307521), Neeraj Saini (12321128), Satadeep Kar (12318654).
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="workouts.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
+

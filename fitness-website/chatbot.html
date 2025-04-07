@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Chatbot - FitLife</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body class="light-mode">
+  <header>
+    <nav class="navbar">
+      <div class="logo">FitLife</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chatbot.html" class="active">Chatbot</a></li>
+        <li><a href="bmi.html">BMI Calculator</a></li>
+        <li><a href="workouts.html">Workout Plans</a></li>
+        <li><a href="nutrition.html">Nutrition Tips</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Fitness Chatbot</h1>
+      <p>Ask questions about workouts, nutrition, or general fitness advice.</p>
+    </section>
+    <br>
+    <section class="chatbot-container">
+      <div class="chat-area" id="chat-area">
+        <div class="message bot">
+          <div class="message-content">
+            Hello! I'm your fitness assistant. Try asking me about:
+            <ul>
+              <li>Workout recommendations</li>
+              <li>Nutrition advice</li>
+              <li>Recovery tips</li>
+              <li>Exercise techniques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your question here..." aria-label="Type your message">
+        <button id="send-btn">Send</button>
+        <button id="clear-chat" class="secondary">Clear Chat</button>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">FitLife</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="bmi.html">BMI Calculator</a>
+        <a href="workouts.html">Workout Plans</a>
+        <a href="nutrition.html">Nutrition Tips</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 FitLife. All rights reserved. This project is made by Nilax (12307521), Neeraj Saini (12321128), Satadeep Kar (12318654).
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
+

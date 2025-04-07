@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator - FitLife</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body class="light-mode">
+  <header>
+    <nav class="navbar">
+      <div class="logo">FitLife</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="bmi.html" class="active">BMI Calculator</a></li>
+        <li><a href="workouts.html">Workout Plans</a></li>
+        <li><a href="nutrition.html">Nutrition Tips</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>BMI Calculator</h1>
+      <p>Calculate your Body Mass Index and get personalized recommendations.</p>
+    </section>
+
+    <section class="bmi-container">
+      <div class="bmi-calculator">
+        <form id="bmi-form">
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" min="18" max="100" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="gender" value="male" checked> Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female"> Female
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" min="100" max="250" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" min="30" max="300" required>
+          </div>
+          
+          <button type="submit" class="btn primary">Calculate BMI</button>
+        </form>
+      </div>
+      
+      <div class="bmi-result" id="bmi-result">
+        <div class="result-card hidden" id="result-card">
+          <h3>Your BMI Result</h3>
+          <div class="bmi-value" id="bmi-value">--</div>
+          <div class="bmi-category" id="bmi-category">--</div>
+          <div class="bmi-meter">
+            <div class="meter-scale">
+              <div class="meter-section underweight">Underweight</div>
+              <div class="meter-section normal">Normal</div>
+              <div class="meter-section overweight">Overweight</div>
+              <div class="meter-section obese">Obese</div>
+            </div>
+            <div class="meter-pointer" id="meter-pointer"></div>
+          </div>
+          <div class="bmi-suggestion" id="bmi-suggestion"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bmi-info">
+      <h2>Understanding BMI</h2>
+      <div class="bmi-categories">
+        <div class="category-card">
+          <h3>Underweight</h3>
+          <p>BMI less than 18.5</p>
+          <p>May indicate nutritional deficiency or other health issues.</p>
+        </div>
+        <div class="category-card">
+          <h3>Normal Weight</h3>
+          <p>BMI between 18.5 and 24.9</p>
+          <p>Generally indicates good health, but not the only factor.</p>
+        </div>
+        <div class="category-card">
+          <h3>Overweight</h3>
+          <p>BMI between 25 and 29.9</p>
+          <p>May increase risk of health problems like heart disease.</p>
+        </div>
+        <div class="category-card">
+          <h3>Obese</h3>
+          <p>BMI of 30 or higher</p>
+          <p>Significantly increases risk of various health conditions.</p>
+        </div>
+      </div>
+      <div class="bmi-disclaimer">
+        <p>Note: BMI is a screening tool and not a diagnostic of body fatness or health. Factors like muscle mass, age, and ethnicity can affect BMI interpretation.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">FitLife</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="bmi.html">BMI Calculator</a>
+        <a href="workouts.html">Workout Plans</a>
+        <a href="nutrition.html">Nutrition Tips</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 FitLife. All rights reserved. This project is made by Nilax (12307521), Neeraj Saini (12321128), Satadeep Kar (12318654).
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="bmi.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
+

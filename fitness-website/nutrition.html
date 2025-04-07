@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Tips - FitLife</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body class="light-mode">
+  <header>
+    <nav class="navbar">
+      <div class="logo">FitLife</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="bmi.html">BMI Calculator</a></li>
+        <li><a href="workouts.html">Workout Plans</a></li>
+        <li><a href="nutrition.html" class="active">Nutrition Tips</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Nutrition Tips</h1>
+      <p>Fuel your body properly to maximize your fitness results.</p>
+    </section>
+
+    <section class="nutrition-macros">
+      <br>
+      <h2>Understanding Macronutrients</h2>
+      <div class="macro-cards">
+        <div class="macro-card">
+          <div class="macro-icon">🍗</div>
+          <h3>Protein</h3>
+          <p>Essential for muscle repair and growth.</p>
+          <ul>
+            <li><strong>Sources:</strong> Chicken, fish, eggs, tofu, legumes, Greek yogurt</li>
+            <li><strong>Recommended:</strong> 1.6-2.2g per kg of bodyweight for active individuals</li>
+            <li><strong>Timing:</strong> Distribute throughout the day, with a serving post-workout</li>
+          </ul>
+        </div>
+        
+        <div class="macro-card">
+          <div class="macro-icon">🍚</div>
+          <h3>Carbohydrates</h3>
+          <p>Primary energy source for high-intensity exercise.</p>
+          <ul>
+            <li><strong>Sources:</strong> Rice, oats, potatoes, fruits, whole grains</li>
+            <li><strong>Recommended:</strong> 3-5g per kg of bodyweight for active individuals</li>
+            <li><strong>Timing:</strong> Higher amounts before and after workouts</li>
+          </ul>
+        </div>
+        
+        <div class="macro-card">
+          <div class="macro-icon">🥑</div>
+          <h3>Fats</h3>
+          <p>Important for hormone production and vitamin absorption.</p>
+          <ul>
+            <li><strong>Sources:</strong> Avocados, nuts, olive oil, fatty fish</li>
+            <li><strong>Recommended:</strong> 0.5-1g per kg of bodyweight</li>
+            <li><strong>Timing:</strong> Moderate amounts throughout the day, less around workouts</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="macro-ratio">
+        <h3>Recommended Macro Ratio</h3>
+        <div class="ratio-chart">
+          <div class="ratio-bar">
+            <div class="ratio-segment protein" style="width: 30%;">30% Protein</div>
+            <div class="ratio-segment carbs" style="width: 45%;">45% Carbs</div>
+            <div class="ratio-segment fats" style="width: 25%;">25% Fats</div>
+          </div>
+        </div>
+        <p class="ratio-note">Note: Optimal ratios may vary based on individual goals and activity levels.</p>
+      </div>
+    </section>
+
+    <section class="meal-plan">
+      <h2>Sample Meal Plan</h2>
+      <div class="meal-tabs">
+        <button class="meal-tab active" data-meal="muscle-gain">Muscle Gain</button>
+        <button class="meal-tab" data-meal="fat-loss">Fat Loss</button>
+        <button class="meal-tab" data-meal="maintenance">Maintenance</button>
+      </div>
+      
+      <div class="meal-content active" id="muscle-gain-content">
+        <div class="daily-meals">
+          <div class="meal">
+            <h3>Breakfast</h3>
+            <img src="breakfasttt.jpg" alt="Breakfast meal" loading="lazy">
+            <ul>
+              <li>3 whole eggs + 3 egg whites scrambled</li>
+              <li>1 cup oatmeal with berries and honey</li>
+              <li>1 banana</li>
+            </ul>
+            <p><strong>Macros:</strong> 40g protein, 60g carbs, 20g fat</p>
+          </div>
+          
+          <div class="meal">
+            <h3>Mid-Morning Snack</h3>
+            <img src="protein.jpg" alt="Mid-morning snack" loading="lazy">
+            <ul>
+              <li>Greek yogurt (1 cup)</li>
+              <li>1 scoop protein powder</li>
+              <li>1/4 cup granola</li>
+              <li>1 tbsp honey</li>
+            </ul>
+            <p><strong>Macros:</strong> 35g protein, 30g carbs, 8g fat</p>
+          </div>
+          
+          <div class="meal">
+            <h3>Lunch</h3>
+            <img src="lunchhh.jpg" alt="Lunch meal" loading="lazy">
+            <ul>
+              <li>6oz grilled chicken breast</li>
+              <li>1 cup brown rice</li>
+              <li>1 cup mixed vegetables</li>
+              <li>1 tbsp olive oil</li>
+            </ul>
+            <p><strong>Macros:</strong> 45g protein, 50g carbs, 15g fat</p>
+          </div>
+          
+          <div class="meal">
+            <h3>Pre-Workout</h3>
+            <img src="preworkout.jpg" alt="Pre-workout meal" loading="lazy">
+            <ul>
+              <li>1 banana</li>
+              <li>1 scoop protein powder</li>
+              <li>1 slice whole grain toast with 1 tbsp peanut butter</li>
+            </ul>
+            <p><strong>Macros:</strong> 25g protein, 40g carbs, 10g fat</p>
+          </div>
+          
+          <div class="meal">
+            <h3>Post-Workout</h3>
+            <img src="postworkout.jpg" alt="Post-workout meal" loading="lazy">
+            <ul>
+              <li>2 scoops protein powder</li>
+              <li>1 cup almond milk</li>
+              <li>1 cup berries</li>
+              <li>1 tbsp honey</li>
+            </ul>
+            <p><strong>Macros:</strong> 50g protein, 30g carbs, 5g fat</p>
+          </div>
+          
+          <div class="meal">
+            <h3>Dinner</h3>
+            <img src="dinner.jpg" alt="Dinner meal" loading="lazy">
+            <ul>
+              <li>8oz salmon</li>
+              <li>1 medium sweet potato</li>
+              <li>2 cups mixed vegetables</li>
+              <li>1 tbsp olive oil</li>
+            </ul>
+            <p><strong>Macros:</strong> 45g protein, 40g carbs, 25g fat</p>
+          </div>
+        </div>
+        
+        <div class="meal-plan-totals">
+          <h3>Daily Totals</h3>
+          <p><strong>Calories:</strong> ~3,000</p>
+          <p><strong>Protein:</strong> 240g (32%)</p>
+          <p><strong>Carbs:</strong> 250g (33%)</p>
+          <p><strong>Fat:</strong> 83g (25%)</p>
+        </div>
+      </div>
+      
+      <div class="meal-content" id="fat-loss-content">
+        <!-- Fat loss meal plan content would go here -->
+        <p class="placeholder-text">Fat loss meal plan details will be displayed here.</p>
+      </div>
+      
+      <div class="meal-content" id="maintenance-content">
+        <!-- Maintenance meal plan content would go here -->
+        <p class="placeholder-text">Maintenance meal plan details will be displayed here.</p>
+      </div>
+    </section>
+
+    <section class="hydration">
+      <h2>Hydration Tips</h2>
+      <div class="hydration-content">
+        <div class="hydration-image">
+          <img src="waterrrrrrrr.webp" alt="Hydration illustration" loading="lazy">
+        </div>
+        <div class="hydration-tips">
+          <h3>Daily Water Intake</h3>
+          <p>Aim for 3-4 liters (100-135 oz) of water per day for active individuals.</p>
+          
+          <h3>Hydration Schedule</h3>
+          <ul>
+            <li><strong>Morning:</strong> 500ml (16oz) upon waking</li>
+            <li><strong>Pre-workout:</strong> 500ml (16oz) 2 hours before exercise</li>
+            <li><strong>During workout:</strong> 250ml (8oz) every 20 minutes</li>
+            <li><strong>Post-workout:</strong> 500ml (16oz) to rehydrate</li>
+            <li><strong>Throughout day:</strong> Regular sips between meals</li>
+          </ul>
+          
+          <h3>Signs of Dehydration</h3>
+          <ul>
+            <li>Thirst</li>
+            <li>Dark yellow urine</li>
+            <li>Fatigue</li>
+            <li>Headache</li>
+            <li>Decreased performance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="supplements">
+      <h2>Supplements</h2>
+      <div class="supplement-disclaimer">
+        <p>Note: Supplements should complement a balanced diet, not replace it. Consult with a healthcare professional before starting any supplement regimen.</p>
+      </div>
+      
+      <div class="supplement-cards">
+        <div class="supplement-card">
+          <h3>Protein Powder</h3>
+          <p><strong>Benefits:</strong> Convenient source of protein for muscle recovery and growth.</p>
+          <p><strong>Recommended use:</strong> 1-2 scoops post-workout or between meals.</p>
+        </div>
+        
+        <div class="supplement-card">
+          <h3>Creatine Monohydrate</h3>
+          <p><strong>Benefits:</strong> Increases strength, power, and muscle mass.</p>
+          <p><strong>Recommended use:</strong> 3-5g daily, timing not critical.</p>
+        </div>
+        
+        <div class="supplement-card">
+          <h3>Fish Oil</h3>
+          <p><strong>Benefits:</strong> Supports joint health and reduces inflammation.</p>
+          <p><strong>Recommended use:</strong> 1-3g of combined EPA/DHA daily with meals.</p>
+        </div>
+        
+        <div class="supplement-card">
+          <h3>Vitamin D</h3>
+          <p><strong>Benefits:</strong> Supports bone health, immune function, and hormone production.</p>
+          <p><strong>Recommended use:</strong> 1000-5000 IU daily, especially during winter months.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">FitLife</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="bmi.html">BMI Calculator</a>
+        <a href="workouts.html">Workout Plans</a>
+        <a href="nutrition.html">Nutrition Tips</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 FitLife. All rights reserved.  This project is made by Nilax (12307521), Neeraj Saini (12321128), Satadeep Kar (12318654).
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
+

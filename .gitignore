@@ -1,0 +1,18 @@
+# Python virtual environment
+venv/
+
+# VS Code settings (optional)
+.vscode/
+
+# Mac or OS junk
+.DS_Store
+
+# __pycache__ folders
+__pycache__/
+*.py[cod]
+
+# Node modules (if your frontend uses Node)
+node_modules/
+
+# Environment files
+.env
