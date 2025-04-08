@@ -4,7 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const sendBtn = document.getElementById("send-btn");
   const clearChat = document.getElementById("clear-chat");
 
-  const backendURL = "http://localhost:8000/chat"; // Change to deployed backend if needed
+  const backendBaseURL =
+  window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:10000"  // or your local port
+    : "https://your-backend-name.onrender.com";  // replace with actual Render backend URL
+
+const backendURL = `${backendBaseURL}/chat`;
+ // Change to deployed backend if needed
 
   sendBtn.addEventListener("click", sendMessage);
   userInput.addEventListener("keypress", (e) => {
